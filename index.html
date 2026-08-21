@@ -3,204 +3,130 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Política de privacidad · Vendettapp</title>
+<title>Vendettapp</title>
+<meta name="description" content="Vendettapp lee la rutina que tu entrenadora programa en una hoja de cálculo, te deja apuntar lo que levantas y lo devuelve a esa misma hoja.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
 <style>
-  :root { color-scheme: light dark; }
-  body {
-    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-    line-height: 1.65;
-    max-width: 46rem;
-    margin: 0 auto;
-    padding: 2.5rem 1.25rem 5rem;
-    color: #1a1a1a;
-    background: #fff;
+  :root{
+    --bg:#0B0B0B; --surface:#111; --line:#FFF; --text:#FFF;
+    --muted:#9A9A9A; --dim:#6A6A6A; --max:760px;
   }
-  @media (prefers-color-scheme: dark) {
-    body { color: #e8e8e8; background: #111; }
-    code { background: #222; }
-    hr { border-color: #333; }
+  *{box-sizing:border-box}
+  body{
+    margin:0; background:var(--bg); color:var(--text);
+    font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+    font-size:17px; line-height:1.6; -webkit-font-smoothing:antialiased;
   }
-  h1 { font-size: 1.75rem; line-height: 1.25; margin-bottom: .25rem; }
-  h2 { font-size: 1.15rem; margin-top: 2.25rem; }
-  .fecha { color: #777; font-size: .9rem; margin-top: 0; }
-  ul { padding-left: 1.25rem; }
-  li { margin: .4rem 0; }
-  code { background: #f2f2f2; padding: .1rem .3rem; border-radius: 3px; font-size: .9em; }
-  hr { border: 0; border-top: 1px solid #e5e5e5; margin: 2.5rem 0; }
-  .destacado { font-weight: 600; }
-  .en { border-left: 3px solid #ccc; padding-left: 1.1rem; }
-  @media (prefers-color-scheme: dark) { .en { border-left-color: #444; } }
+  .wrap{max-width:var(--max); margin:0 auto; padding:0 20px}
+  h1,h2,h3,.caps{font-family:Anton,Impact,"Arial Narrow Bold",sans-serif; font-weight:400; letter-spacing:.02em; text-transform:uppercase}
+  h1{font-size:clamp(38px,9vw,68px); line-height:1; margin:0}
+  h2{font-size:clamp(22px,4.5vw,30px); line-height:1.1; margin:0 0 14px}
+  h3{font-size:17px; margin:0 0 6px}
+  header{border-bottom:2px solid var(--line); padding:56px 0 30px; margin-bottom:44px}
+  .tag{display:inline-block; border:2px solid var(--line); padding:4px 10px; font-size:12px; letter-spacing:.08em; margin-bottom:18px}
+  .lede{font-size:clamp(18px,2.6vw,21px); color:var(--text); margin:18px 0 0; max-width:60ch}
+  section{margin-bottom:46px}
+  p{margin:0 0 14px; color:var(--muted); max-width:68ch}
+  p strong{color:var(--text)}
+  ul{margin:0 0 14px; padding-left:22px; color:var(--muted); max-width:68ch}
+  li{margin-bottom:8px}
+  .grid{display:grid; gap:14px; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); margin-top:20px}
+  .card{border:2px solid var(--line); padding:16px; background:var(--surface)}
+  .card p{margin:0; font-size:15px}
+  .scope{border:2px solid var(--line); background:var(--surface); padding:18px 20px}
+  code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; font-size:14px; color:var(--text); word-break:break-all}
+  a{color:var(--text); text-decoration:underline; text-underline-offset:3px}
+  a:hover{background:var(--text); color:var(--bg); text-decoration:none}
+  .rule{height:2px; background:var(--line); margin:44px 0}
+  footer{border-top:2px solid var(--line); padding:26px 0 60px; color:var(--dim); font-size:14px}
+  footer p{color:var(--dim); font-size:14px}
+  [lang="en"] h2{color:var(--text)}
+  .en{border-left:2px solid var(--line); padding-left:20px}
 </style>
 </head>
 <body>
 
-<h1>Política de privacidad de Vendettapp</h1>
-<p class="fecha">Última actualización: 21 de agosto de 2026</p>
+<header>
+  <div class="wrap">
+    <span class="tag">App de entrenamiento · Android</span>
+    <h1>Vendettapp</h1>
+    <p class="lede">Lee la rutina que tu entrenadora te programa en una hoja de cálculo, te deja apuntar lo que levantas en el gimnasio, y lo devuelve a esa misma hoja.</p>
+  </div>
+</header>
 
-<p>
-  Vendettapp es una aplicación para las atletas de Vendetta — Centro Deportivo. Lee la rutina que
-  su entrenadora les programa en una hoja de cálculo de Google y les permite apuntar lo que
-  levantan y devolverlo a esa misma hoja.
-</p>
+<div class="wrap">
 
-<h2>Lo más importante</h2>
-<p class="destacado">
-  Vendettapp no tiene servidores. No recojo, ni almaceno, ni recibo, ni vendo ningún dato tuyo.
-</p>
-<p>
-  Todo lo que la aplicación maneja va directamente entre tu móvil y tu propia hoja de cálculo de
-  Google. Nada pasa por mí en ningún momento. No hay cuentas de usuario, ni analítica, ni
-  publicidad, ni rastreo de ningún tipo.
-</p>
+  <section>
+    <h2>Qué hace</h2>
+    <p>Tu entrenadora programa tu bloque en una hoja de cálculo de Google: los ejercicios, las series, las repeticiones, el RPE y sus notas. Vendettapp lee esa hoja y te la enseña <strong>un día cada vez</strong>, en el móvil, para que no tengas que buscar tu fila entre veinte columnas con el teléfono en una mano.</p>
+    <p>Cuando terminas la sesión, lo que has apuntado <strong>vuelve a su sitio en la hoja</strong>, a las columnas que te corresponden a ti. Ella lo ve donde siempre lo ha visto.</p>
+    <div class="grid">
+      <div class="card">
+        <h3>Tu día, no tu bloque</h3>
+        <p>Los ejercicios que tocan hoy, con el peso que pusiste la última vez delante para saber de dónde vienes.</p>
+      </div>
+      <div class="card">
+        <h3>Cuestionario diario</h3>
+        <p>El TRAC: sueño, estrés, dolor y sensaciones. Es lo que le permite a ella ajustar la programación.</p>
+      </div>
+      <div class="card">
+        <h3>Cronómetro</h3>
+        <p>Detecta los circuitos que ella escribe y los cronometra, con avisos por sonido y vibración.</p>
+      </div>
+      <div class="card">
+        <h3>Sin cobertura</h3>
+        <p>El gimnasio es un sótano. La última rutina descargada queda en el móvil y todo sigue funcionando.</p>
+      </div>
+    </div>
+  </section>
 
-<h2>De quién es la hoja</h2>
-<p>
-  <strong>El documento es tuyo.</strong> Está en tu cuenta de Google, y tu entrenadora está
-  invitada en él para poder escribirte la programación: te crea dentro una pestaña por cada bloque
-  de entrenamiento. Vendettapp no crea documentos ni accede a ningún otro archivo de tu Drive:
-  trabaja únicamente sobre la hoja cuyo enlace has pegado tú en la aplicación.
-</p>
+  <div class="rule"></div>
 
-<h2>Qué se guarda en tu móvil</h2>
-<p>Todo esto vive únicamente en tu dispositivo:</p>
-<ul>
-  <li>El enlace a la hoja de cálculo que has pegado, y la lista de sus pestañas.</li>
-  <li>Una copia de la rutina descargada, para que la aplicación funcione sin cobertura.</li>
-  <li>Los pesos, repeticiones, RPE y notas que apuntas.</li>
-  <li>Tus respuestas del cuestionario diario (trac diario).</li>
-  <li>La configuración del cronómetro de intervalos y qué notas de tu entrenadora has abierto ya.</li>
-</ul>
-<p>
-  Si desinstalas la aplicación, todo esto se borra del móvil.
-</p>
+  <section>
+    <h2>El permiso de Google</h2>
+    <div class="scope">
+      <p><strong>Vendettapp pide un solo permiso:</strong></p>
+      <p><code>https://www.googleapis.com/auth/spreadsheets</code></p>
+    </div>
+    <p style="margin-top:18px">Lo necesita <strong>para escribir en tu propia hoja</strong>. El documento es tuyo —tu entrenadora está invitada en él y te crea dentro una pestaña por bloque—, y un enlace compartido solo da permiso de lectura: para escribir, Google necesita saber quién escribe.</p>
+    <p>Es <strong>autorización, no inicio de sesión</strong>. La app no aprende tu nombre ni tu correo, no crea ninguna cuenta y no tiene ningún perfil tuyo.</p>
+    <ul>
+      <li>Escribe <strong>solo tus columnas</strong>: peso escogido, peso de la última serie, RPE, tus notas y el cuestionario diario.</li>
+      <li><strong>Nunca toca lo que programa ella</strong>: ni ejercicios, ni series, ni repeticiones, ni sus notas.</li>
+      <li>No hay servidor por medio. Los datos van del móvil a tu hoja y punto: <strong>no existe ningún servidor nuestro por el que puedan pasar</strong>.</li>
+    </ul>
+    <p>Puedes retirarle el permiso cuando quieras desde <a href="https://myaccount.google.com/permissions" rel="noopener">la página de permisos de tu cuenta de Google</a>. Los detalles completos están en la política de privacidad.</p>
+  </section>
 
-<h2>Copia de seguridad de Android</h2>
-<p>
-  Android hace por su cuenta copia de seguridad de las preferencias de las aplicaciones en el
-  Google Drive de su dueño, y Vendettapp no es una excepción. Esa copia es tuya, está en tu cuenta
-  de Google y yo no tengo acceso a ella. Es también el motivo por el que, si reinstalas la
-  aplicación, puedes encontrarte tus datos de vuelta. Puedes desactivarlo desde los ajustes de
-  copia de seguridad de tu móvil.
-</p>
+  <div class="rule"></div>
 
-<h2>Acceso a tus hojas de cálculo de Google</h2>
-<p>
-  Para poder escribir en tu hoja, Vendettapp te pide permiso a través de Google. Pide
-  <strong>un solo permiso</strong>:
-</p>
-<p><code>https://www.googleapis.com/auth/spreadsheets</code></p>
-<p>Conviene entender bien qué significa:</p>
-<ul>
-  <li>
-    Es una <strong>autorización, no un inicio de sesión</strong>. La aplicación no aprende tu
-    nombre, ni tu correo, ni ningún dato de tu cuenta.
-  </li>
-  <li>
-    Se usa <strong>solo</strong> para leer la rutina y escribir tus propios registros en las
-    columnas de atleta de esa hoja: peso escogido, peso de la última serie, RPE, tus notas y el
-    cuestionario diario.
-  </li>
-  <li>
-    <strong>Nunca modifica lo que programa tu entrenadora</strong>: ni ejercicios, ni series, ni
-    repeticiones, ni sus notas.
-  </li>
-  <li>
-    Esa información viaja entre tu móvil y Google. No pasa por ningún servidor mío, porque no
-    existe.
-  </li>
-  <li>
-    <strong>Nadie la lee.</strong> Ni yo ni ninguna otra persona podemos ver lo que apuntas: no
-    llega a ningún sitio donde nadie pudiera leerlo. Tampoco se transfiere a terceros, ni se usa
-    para publicidad, ni para entrenar modelos, ni para ninguna finalidad distinta de enseñarte tu
-    rutina y devolver tus registros a tu hoja.
-  </li>
-</ul>
-<p>
-  Puedes retirar ese permiso cuando quieras desde
-  <a href="https://myaccount.google.com/permissions">la página de permisos de tu cuenta de
-  Google</a>. La aplicación seguirá leyendo y guardando en el móvil como siempre; sencillamente
-  dejará de poder escribir en la hoja.
-</p>
-<p>
-  El uso que Vendettapp hace de la información recibida de las APIs de Google se ajusta a la
-  <a href="https://developers.google.com/terms/api-services-user-data-policy">Política de Datos de
-  Usuario de los Servicios de la API de Google</a>, incluidos los requisitos de uso limitado
-  (<em>Limited Use</em>).
-</p>
+  <section>
+    <h2>Privacidad</h2>
+    <p>No se recoge nada. No hay cuentas, no hay analítica y no hay servidor. Lo que apuntas vive en tu móvil y en tu propia hoja de cálculo.</p>
+    <p><a href="https://tom-crespo.github.io/vendettapp-privacidad/">Política de privacidad de Vendettapp →</a></p>
+  </section>
 
-<h2>Permisos que pide la aplicación</h2>
-<ul>
-  <li><strong>Internet y estado de la red</strong>: para descargar la rutina de la hoja.</li>
-  <li><strong>Vibración</strong>: para los avisos del cronómetro de intervalos.</li>
-</ul>
+  <div class="rule"></div>
 
-<h2>Menores</h2>
-<p>
-  Vendettapp no está dirigida a menores de 13 años y no recoge datos de nadie, con independencia de
-  su edad.
-</p>
+  <section class="en" lang="en">
+    <h2>In English</h2>
+    <p><strong>Vendettapp</strong> is an Android training app. A strength coach programmes an athlete's training block in a Google Sheet; the app reads that sheet, shows the athlete one training day at a time on their phone, and writes back what they actually lifted.</p>
+    <p>It requests a single OAuth scope, <code>https://www.googleapis.com/auth/spreadsheets</code>, in order to write into <strong>a spreadsheet the user owns</strong>. The coach is an editor on that file and adds a tab per training block; a share link grants read access only, so writing requires Google to know who is writing.</p>
+    <p>This is <strong>authorization, not sign-in</strong>: the app never learns the user's name or email address and holds no account or profile. It writes <strong>only the athlete's own columns</strong> — chosen weight, last set weight, RPE, personal notes and the daily questionnaire — and never modifies anything the coach programmes. <strong>No Google user data leaves the device for any server of ours, because no such server exists</strong>: data travels from the phone directly to the user's own spreadsheet.</p>
+    <p>Vendettapp's use of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy" rel="noopener">Google API Services User Data Policy</a>, including the Limited Use requirements. Full details in the <a href="https://tom-crespo.github.io/vendettapp-privacidad/">privacy policy</a>.</p>
+  </section>
 
-<h2>Cambios en esta política</h2>
-<p>
-  Si cambia algo, se actualizará esta página y la fecha del principio. Si el cambio afecta a cómo
-  se tratan tus datos, se avisará dentro de la propia aplicación.
-</p>
-
-<h2>Contacto</h2>
-<p>
-  Cualquier duda sobre esta política o sobre la aplicación:
-  <a href="mailto:tomcrespo90@gmail.com">tomcrespo90@gmail.com</a>
-</p>
-
-<hr>
-
-<div class="en" lang="en">
-<h2>Privacy policy (English summary)</h2>
-<p>
-  <strong>Vendettapp</strong> is an Android training app. A strength coach programmes an athlete's
-  training block in a Google Sheet; the app reads that sheet, shows the athlete one training day at
-  a time, and writes back what they actually lifted.
-</p>
-<p>
-  <strong>The spreadsheet belongs to the user.</strong> It lives in their own Google account, and
-  their coach is an editor on it who adds a tab per training block. The app never creates files and
-  never touches any other file in the user's Drive — only the sheet whose link the user pasted into
-  the app.
-</p>
-<p>
-  The app requests a single OAuth scope,
-  <code>https://www.googleapis.com/auth/spreadsheets</code>. This is
-  <strong>authorization, not sign-in</strong>: the app never learns the user's name or email address
-  and holds no account or profile. It is used only to read the routine and to write the athlete's
-  own records — chosen weight, last set weight, RPE, personal notes and the daily questionnaire —
-  into the athlete's columns of that sheet. It never modifies anything the coach programmes.
-</p>
-<p>
-  <strong>There are no servers.</strong> No Google user data is collected, stored, received or sold
-  by the developer; it travels from the phone directly to the user's own spreadsheet. No human,
-  including the developer, can read it, because it never reaches anywhere it could be read. It is
-  never transferred to third parties, never used for advertising, and never used to train models.
-  Everything else the app keeps — the sheet link, a cached copy of the routine, the athlete's
-  entries, the daily questionnaire, timer settings — is stored only on the device and is deleted
-  when the app is uninstalled.
-</p>
-<p>
-  Users can revoke the permission at any time from
-  <a href="https://myaccount.google.com/permissions">their Google account permissions page</a>.
-</p>
-<p>
-  Vendettapp's use of information received from Google APIs adheres to the
-  <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services
-  User Data Policy</a>, including the Limited Use requirements.
-</p>
-<p>Contact: <a href="mailto:tomcrespo90@gmail.com">tomcrespo90@gmail.com</a></p>
 </div>
 
-<hr>
-<p style="color:#777;font-size:.9rem">
-  Vendettapp · aplicación desarrollada por Tom Crespo para las atletas de Vendetta — Centro
-  Deportivo. · <a href="https://tom-crespo.github.io/vendettapp/">Página de la aplicación</a>
-</p>
+<footer>
+  <div class="wrap">
+    <p><strong style="color:#FFF">Vendettapp</strong> — desarrollada por Tom Crespo.</p>
+    <p>Contacto y soporte: <a href="mailto:tomcrespo90@gmail.com">tomcrespo90@gmail.com</a></p>
+    <p><a href="https://tom-crespo.github.io/vendettapp-privacidad/">Política de privacidad</a></p>
+  </div>
+</footer>
 
 </body>
 </html>
