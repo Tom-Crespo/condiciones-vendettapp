@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
 <meta charset="utf-8">
@@ -28,17 +28,19 @@
   code { background: #f2f2f2; padding: .1rem .3rem; border-radius: 3px; font-size: .9em; }
   hr { border: 0; border-top: 1px solid #e5e5e5; margin: 2.5rem 0; }
   .destacado { font-weight: 600; }
+  .en { border-left: 3px solid #ccc; padding-left: 1.1rem; }
+  @media (prefers-color-scheme: dark) { .en { border-left-color: #444; } }
 </style>
 </head>
 <body>
 
 <h1>Política de privacidad de Vendettapp</h1>
-<p class="fecha">Última actualización: 10 de agosto de 2026</p>
+<p class="fecha">Última actualización: 21 de agosto de 2026</p>
 
 <p>
   Vendettapp es una aplicación para las atletas de Vendetta — Centro Deportivo. Lee la rutina que
-  su entrenadora programa en una hoja de cálculo de Google y les permite apuntar lo que levantan y
-  devolverlo a esa misma hoja.
+  su entrenadora les programa en una hoja de cálculo de Google y les permite apuntar lo que
+  levantan y devolverlo a esa misma hoja.
 </p>
 
 <h2>Lo más importante</h2>
@@ -46,19 +48,27 @@
   Vendettapp no tiene servidores. No recojo, ni almaceno, ni recibo, ni vendo ningún dato tuyo.
 </p>
 <p>
-  Todo lo que la aplicación maneja va directamente entre tu móvil y la hoja de cálculo de Google
-  que tú y tu entrenadora ya usáis. Nada pasa por mí en ningún momento. No hay cuentas de usuario,
-  ni analítica, ni publicidad, ni rastreo de ningún tipo.
+  Todo lo que la aplicación maneja va directamente entre tu móvil y tu propia hoja de cálculo de
+  Google. Nada pasa por mí en ningún momento. No hay cuentas de usuario, ni analítica, ni
+  publicidad, ni rastreo de ningún tipo.
+</p>
+
+<h2>De quién es la hoja</h2>
+<p>
+  <strong>El documento es tuyo.</strong> Está en tu cuenta de Google, y tu entrenadora está
+  invitada en él para poder escribirte la programación: te crea dentro una pestaña por cada bloque
+  de entrenamiento. Vendettapp no crea documentos ni accede a ningún otro archivo de tu Drive:
+  trabaja únicamente sobre la hoja cuyo enlace has pegado tú en la aplicación.
 </p>
 
 <h2>Qué se guarda en tu móvil</h2>
 <p>Todo esto vive únicamente en tu dispositivo:</p>
 <ul>
-  <li>El enlace a la hoja de cálculo que has pegado.</li>
+  <li>El enlace a la hoja de cálculo que has pegado, y la lista de sus pestañas.</li>
   <li>Una copia de la rutina descargada, para que la aplicación funcione sin cobertura.</li>
   <li>Los pesos, repeticiones, RPE y notas que apuntas.</li>
   <li>Tus respuestas del cuestionario diario (trac diario).</li>
-  <li>Preferencias: el estilo visual elegido y la configuración del cronómetro.</li>
+  <li>La configuración del cronómetro de intervalos y qué notas de tu entrenadora has abierto ya.</li>
 </ul>
 <p>
   Si desinstalas la aplicación, todo esto se borra del móvil.
@@ -75,9 +85,11 @@
 
 <h2>Acceso a tus hojas de cálculo de Google</h2>
 <p>
-  Para poder escribir en la hoja de tu entrenadora, Vendettapp te pide permiso a través de Google
-  (el permiso <code>spreadsheets</code>). Conviene entender bien qué significa:
+  Para poder escribir en tu hoja, Vendettapp te pide permiso a través de Google. Pide
+  <strong>un solo permiso</strong>:
 </p>
+<p><code>https://www.googleapis.com/auth/spreadsheets</code></p>
+<p>Conviene entender bien qué significa:</p>
 <ul>
   <li>
     Es una <strong>autorización, no un inicio de sesión</strong>. La aplicación no aprende tu
@@ -96,6 +108,12 @@
     Esa información viaja entre tu móvil y Google. No pasa por ningún servidor mío, porque no
     existe.
   </li>
+  <li>
+    <strong>Nadie la lee.</strong> Ni yo ni ninguna otra persona podemos ver lo que apuntas: no
+    llega a ningún sitio donde nadie pudiera leerlo. Tampoco se transfiere a terceros, ni se usa
+    para publicidad, ni para entrenar modelos, ni para ninguna finalidad distinta de enseñarte tu
+    rutina y devolver tus registros a tu hoja.
+  </li>
 </ul>
 <p>
   Puedes retirar ese permiso cuando quieras desde
@@ -108,14 +126,6 @@
   <a href="https://developers.google.com/terms/api-services-user-data-policy">Política de Datos de
   Usuario de los Servicios de la API de Google</a>, incluidos los requisitos de uso limitado
   (<em>Limited Use</em>).
-</p>
-
-<h2>Cuando compartes tu semana</h2>
-<p>
-  La aplicación puede preparar un resumen de tu semana en texto para que se lo mandes a tu
-  entrenadora. Ese texto se entrega al menú de compartir de Android y va únicamente a donde tú
-  elijas mandarlo (WhatsApp, correo, lo que sea). La aplicación no lo envía a ninguna parte por su
-  cuenta.
 </p>
 
 <h2>Permisos que pide la aplicación</h2>
@@ -143,9 +153,53 @@
 </p>
 
 <hr>
+
+<div class="en" lang="en">
+<h2>Privacy policy (English summary)</h2>
+<p>
+  <strong>Vendettapp</strong> is an Android training app. A strength coach programmes an athlete's
+  training block in a Google Sheet; the app reads that sheet, shows the athlete one training day at
+  a time, and writes back what they actually lifted.
+</p>
+<p>
+  <strong>The spreadsheet belongs to the user.</strong> It lives in their own Google account, and
+  their coach is an editor on it who adds a tab per training block. The app never creates files and
+  never touches any other file in the user's Drive — only the sheet whose link the user pasted into
+  the app.
+</p>
+<p>
+  The app requests a single OAuth scope,
+  <code>https://www.googleapis.com/auth/spreadsheets</code>. This is
+  <strong>authorization, not sign-in</strong>: the app never learns the user's name or email address
+  and holds no account or profile. It is used only to read the routine and to write the athlete's
+  own records — chosen weight, last set weight, RPE, personal notes and the daily questionnaire —
+  into the athlete's columns of that sheet. It never modifies anything the coach programmes.
+</p>
+<p>
+  <strong>There are no servers.</strong> No Google user data is collected, stored, received or sold
+  by the developer; it travels from the phone directly to the user's own spreadsheet. No human,
+  including the developer, can read it, because it never reaches anywhere it could be read. It is
+  never transferred to third parties, never used for advertising, and never used to train models.
+  Everything else the app keeps — the sheet link, a cached copy of the routine, the athlete's
+  entries, the daily questionnaire, timer settings — is stored only on the device and is deleted
+  when the app is uninstalled.
+</p>
+<p>
+  Users can revoke the permission at any time from
+  <a href="https://myaccount.google.com/permissions">their Google account permissions page</a>.
+</p>
+<p>
+  Vendettapp's use of information received from Google APIs adheres to the
+  <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services
+  User Data Policy</a>, including the Limited Use requirements.
+</p>
+<p>Contact: <a href="mailto:tomcrespo90@gmail.com">tomcrespo90@gmail.com</a></p>
+</div>
+
+<hr>
 <p style="color:#777;font-size:.9rem">
   Vendettapp · aplicación desarrollada por Tom Crespo para las atletas de Vendetta — Centro
-  Deportivo.
+  Deportivo. · <a href="https://tom-crespo.github.io/vendettapp/">Página de la aplicación</a>
 </p>
 
 </body>
