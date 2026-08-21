@@ -48,17 +48,22 @@
   Vendettapp no tiene servidores. No recojo, ni almaceno, ni recibo, ni vendo ningún dato tuyo.
 </p>
 <p>
-  Todo lo que la aplicación maneja va directamente entre tu móvil y tu propia hoja de cálculo de
-  Google. Nada pasa por mí en ningún momento. No hay cuentas de usuario, ni analítica, ni
-  publicidad, ni rastreo de ningún tipo.
+  Todo lo que la aplicación maneja va directamente entre tu móvil y la hoja de cálculo de Google
+  que tu entrenadora comparte contigo. Nada pasa por mí en ningún momento. No hay cuentas de
+  usuario, ni analítica, ni publicidad, ni rastreo de ningún tipo.
 </p>
 
 <h2>De quién es la hoja</h2>
 <p>
-  <strong>El documento es tuyo.</strong> Está en tu cuenta de Google, y tu entrenadora está
-  invitada en él para poder escribirte la programación: te crea dentro una pestaña por cada bloque
-  de entrenamiento. Vendettapp no crea documentos ni accede a ningún otro archivo de tu Drive:
-  trabaja únicamente sobre la hoja cuyo enlace has pegado tú en la aplicación.
+  <strong>La hoja la crea tu entrenadora y te la comparte contigo.</strong> El documento es suyo y
+  vive en su cuenta de Google; dentro te va creando una pestaña por cada bloque de entrenamiento.
+  Para que Vendettapp pueda devolverle tus registros, ella tiene que compartírtela
+  <strong>con permiso de edición</strong>: un enlace de solo lectura deja ver la rutina, pero no
+  escribir. Si ese es tu caso, la aplicación te lo dice y no envía nada.
+</p>
+<p>
+  Vendettapp no crea documentos, y <strong>no accede a ningún otro archivo</strong> de tu Google
+  Drive ni del suyo: trabaja únicamente sobre la hoja cuyo enlace has pegado tú en la aplicación.
 </p>
 
 <h2>Qué se guarda en tu móvil</h2>
@@ -85,8 +90,8 @@
 
 <h2>Acceso a tus hojas de cálculo de Google</h2>
 <p>
-  Para poder escribir en tu hoja, Vendettapp te pide permiso a través de Google. Pide
-  <strong>un solo permiso</strong>:
+  Para poder escribir tus registros en esa hoja, Vendettapp te pide permiso a través de Google.
+  Pide <strong>un solo permiso</strong>:
 </p>
 <p><code>https://www.googleapis.com/auth/spreadsheets</code></p>
 <p>Conviene entender bien qué significa:</p>
@@ -162,10 +167,12 @@
   a time, and writes back what they actually lifted.
 </p>
 <p>
-  <strong>The spreadsheet belongs to the user.</strong> It lives in their own Google account, and
-  their coach is an editor on it who adds a tab per training block. The app never creates files and
-  never touches any other file in the user's Drive — only the sheet whose link the user pasted into
-  the app.
+  <strong>The spreadsheet is created and owned by the coach</strong>, who makes one per athlete and
+  shares it with them. For the app to write, she must share it with <strong>edit</strong>
+  permission; a read-only link lets the athlete see the routine but not record anything, and the
+  app says so rather than failing silently. The app never creates files and <strong>never touches
+  any other file</strong> in anyone's Drive — only the single sheet whose link the user pasted
+  into the app.
 </p>
 <p>
   The app requests a single OAuth scope,
